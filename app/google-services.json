@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "572507428008",
+    "firebase_url": "https://androidqiita.firebaseio.com",
+    "project_id": "androidqiita",
+    "storage_bucket": "androidqiita.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572507428008:android:a250ed83d1a1daa1",
+        "android_client_info": {
+          "package_name": "ashi_psn.jp.androidqiita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572507428008-rtdgcpigqm21h21di8f8dg2h70rlkimh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE8KHnS9PyS1ZqT2FFlLHZArjW3nyc3gk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

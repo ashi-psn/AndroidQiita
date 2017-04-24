@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="ashi_psn.jp.androidqiita.ViewModel.ItemViewModel.ItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Spring Security 使い方メモ　基礎・仕組み"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/userimage"/>
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/title"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:text="ashi_psn"
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgray"
+            android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/userimage"/>
+    </RelativeLayout>
+</layout>
