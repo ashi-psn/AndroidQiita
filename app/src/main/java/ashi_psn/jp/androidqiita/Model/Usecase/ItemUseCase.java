@@ -13,6 +13,7 @@ import ashi_psn.jp.androidqiita.Model.Repository.API.Request.QiitaAPI;
 import ashi_psn.jp.androidqiita.Model.Repository.API.Request.RequestBody.ItemQuery;
 import ashi_psn.jp.androidqiita.Model.Repository.API.Response.Item;
 import ashi_psn.jp.androidqiita.Model.Repository.QiitaAPIRepository;
+import rx.Observable;
 import rx.Single;
 
 /**
@@ -32,7 +33,7 @@ public class ItemUseCase {
      * @param query
      * @return
      */
-    public Single<List<Item>> getItems(ItemQuery query){
+    public Observable<List<Item>> getItems(ItemQuery query){
         return apiRepository.getItems(query);
     }
 

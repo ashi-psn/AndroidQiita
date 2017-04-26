@@ -16,6 +16,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
+import rx.Observable;
 import rx.Single;
 
 /**
@@ -62,7 +63,7 @@ public interface QiitaAPI{
      */
     @Headers({ContentType.JSON})
     @GET("/api/v2/items")
-    Single<List<Item>> getItems(@QueryMap Map<String, String> query);
+    Observable<List<Item>> getItems(@QueryMap Map<String, String> query);
 
     /**
      * 投稿を取得

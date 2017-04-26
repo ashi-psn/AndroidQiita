@@ -2,39 +2,40 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="viewmodel"
-            type="ashi_psn.jp.androidqiita.ViewModel.ItemViewModel.ItemViewModel" />
+            name="item"
+            type="ashi_psn.jp.androidqiita.Model.Repository.API.Response.Item" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
-
-        <TextView
-            android:id="@+id/title"
-            android:text="Spring Security 使い方メモ　基礎・仕組み"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkgray"
-            android:textSize="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/userimage"/>
+        android:padding="15dp">
 
         <ImageView
             android:id="@+id/userimage"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_below="@+id/title"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentStart="true"/>
 
         <TextView
-            android:text="ashi_psn"
+            android:id="@+id/title"
+            android:text="@{item.title}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textSize="13dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/userimage"/>
+
+        <TextView
+            android:text="@{item.user.id}"
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/lightgray"
             android:layout_below="@+id/title"
             android:layout_toRightOf="@+id/userimage"/>
+
+
     </RelativeLayout>
 </layout>

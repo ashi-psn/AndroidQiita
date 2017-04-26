@@ -2,6 +2,7 @@ package ashi_psn.jp.androidqiita.DI;
 
 import javax.inject.Singleton;
 
+import ashi_psn.jp.androidqiita.Model.Repository.DAO.Entity.AfterReading;
 import dagger.Component;
 
 /**
@@ -15,5 +16,5 @@ public interface AppComponent {
     FragmentComponent fragmentComponent(FragmentModule fragmentModule);
     ServiceComponent serviceComponent(ServiceModule serviceModule);
     ViewComponent viewComponent(ViewModule viewModule);
-//    DAOComponent daoComponent(DAOModule daoModule);
+//    RealmObjectClassModule realmObjectClassModule(Class<AfterReading> afterReading);
 }

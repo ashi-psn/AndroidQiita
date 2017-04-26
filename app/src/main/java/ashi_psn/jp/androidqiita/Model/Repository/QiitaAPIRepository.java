@@ -13,6 +13,7 @@ import ashi_psn.jp.androidqiita.Model.Repository.API.Response.Item;
 import ashi_psn.jp.androidqiita.Model.Repository.API.Response.TokenResponse;
 import ashi_psn.jp.androidqiita.R;
 import ashi_psn.jp.androidqiita.View.Activity.BaseActivity;
+import rx.Observable;
 import rx.Single;
 
 /**
@@ -43,7 +44,7 @@ public class QiitaAPIRepository extends BaseRepository {
         return this.api.getToken(body);
     }
 
-    public Single<List<Item>> getItems(ItemQuery query){
+    public Observable<List<Item>> getItems(ItemQuery query){
         return api.getItems(query);
     }
 

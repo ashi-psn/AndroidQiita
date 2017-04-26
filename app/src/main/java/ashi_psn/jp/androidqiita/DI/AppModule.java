@@ -8,6 +8,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor;
 import javax.inject.Singleton;
 
 import ashi_psn.jp.androidqiita.Model.Repository.API.Request.QiitaAPI;
+import ashi_psn.jp.androidqiita.Model.Repository.DAO.Entity.AfterReading;
 import ashi_psn.jp.androidqiita.R;
 import dagger.Module;
 import dagger.Provides;
@@ -63,10 +64,17 @@ public class AppModule {
 
     @Singleton
     @Provides
-    public Realm privideRealm(){
+    public Realm provideRealm(){
+        Realm.init(provideApplicationContext());
         RealmConfiguration realmConfig = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(realmConfig);
         return Realm.getDefaultInstance();
+    }
+
+    @Singleton
+    @Provides
+    public Class<AfterReading> provideAfterReading(){
+        return AfterReading.class;
     }
 
 }

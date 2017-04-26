@@ -2,11 +2,12 @@ package ashi_psn.jp.androidqiita.Model.Repository.API.Response;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.BindingAdapter;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+
+import ashi_psn.jp.androidqiita.BR;
 
 /**
  * Created by ashi_psn on 2017/04/22.
@@ -41,9 +42,10 @@ public class Item extends BaseObservable{
     private String updated_at;
     private String url;
     private User user;
-    private List<Tag> tags;
+    private List<TagsBean> tags;
+    private List<Tag> v2tags;
 
-    @Bindable
+
     public String getRendered_body() {
         return rendered_body;
     }
@@ -52,7 +54,7 @@ public class Item extends BaseObservable{
         this.rendered_body = rendered_body;
     }
 
-    @Bindable
+
     public String getBody() {
         return body;
     }
@@ -101,12 +103,14 @@ public class Item extends BaseObservable{
         this.privateX = privateX;
     }
 
+    @Bindable
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+        notifyPropertyChanged(BR.title);
     }
 
     public String getUpdated_at() {
@@ -125,20 +129,56 @@ public class Item extends BaseObservable{
         this.url = url;
     }
 
+    @Bindable
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
+        notifyPropertyChanged(BR.user);
     }
 
-    public List<Tag> getTags() {
+    public List<TagsBean> getTags() {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(List<TagsBean> tags) {
         this.tags = tags;
     }
 
+
+    public static class TagsBean {
+        /**
+         * name : bug
+         * versions : []
+         */
+
+        private String name;
+        private List<?> versions;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public List<?> getVersions() {
+            return versions;
+        }
+
+        public void setVersions(List<?> versions) {
+            this.versions = versions;
+        }
+    }
+
+    private void setV2Tags(List<Tag> tags){
+        this.v2tags = tags;
+    }
+
+    private List<Tag> getV2tags(){
+        return v2tags;
+    }
 }

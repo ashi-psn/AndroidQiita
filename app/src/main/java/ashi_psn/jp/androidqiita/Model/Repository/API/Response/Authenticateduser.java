@@ -1,10 +1,12 @@
 package ashi_psn.jp.androidqiita.Model.Repository.API.Response;
 
+import android.databinding.BaseObservable;
+
 /**
  * Created by ashi_psn on 2017/04/22.
  */
 
-public class Authenticateduser {
+public class Authenticateduser extends BaseObservable{
 
     /**
      * description : Hello, world.
