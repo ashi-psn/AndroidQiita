@@ -4,10 +4,10 @@ import android.app.Application;
 
 import org.greenrobot.eventbus.EventBus;
 
-import ashi_psn.jp.androidqiita.DI.AppComponent;
-import ashi_psn.jp.androidqiita.DI.AppModule;
-import ashi_psn.jp.androidqiita.DI.DaggerAppComponent;
-import ashi_psn.jp.androidqiita.DI.EventBusModule;
+import ashi_psn.jp.androidqiita.di.AppComponent;
+import ashi_psn.jp.androidqiita.di.AppModule;
+import ashi_psn.jp.androidqiita.di.DaggerAppComponent;
+import ashi_psn.jp.androidqiita.di.EventBusModule;
 
 /**
  * Created by ashi_psn on 2017/04/18.

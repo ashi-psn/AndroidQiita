@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="ashi_psn.jp.androidqiita.ViewModel.ActivityViewModel.HomeActivityViewModel" />
+            type="ashi_psn.jp.androidqiita.viewmodel.activityviewmodel.HomeActivityViewModel" />
     </data>
 
     <android.support.v4.widget.DrawerLayout

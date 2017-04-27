@@ -3,7 +3,7 @@
     <data>
         <variable
             name="item"
-            type="ashi_psn.jp.androidqiita.Model.Repository.API.Response.Item" />
+            type="ashi_psn.jp.androidqiita.model.repository.api.response.Item" />
     </data>
 
     <RelativeLayout
