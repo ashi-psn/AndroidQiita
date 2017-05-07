@@ -5,7 +5,9 @@ import java.util.Map;
 
 import ashi_psn.jp.androidqiita.model.repository.api.request.requestbody.Authorization;
 import ashi_psn.jp.androidqiita.model.repository.api.response.Authenticateduser;
+import ashi_psn.jp.androidqiita.model.repository.api.response.Comment;
 import ashi_psn.jp.androidqiita.model.repository.api.response.Item;
+import ashi_psn.jp.androidqiita.model.repository.api.response.Tag;
 import ashi_psn.jp.androidqiita.model.repository.api.response.TokenResponse;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -72,4 +74,22 @@ public interface QiitaAPI{
     @Headers({ContentType.JSON})
     @GET("/api/v2/items/{item_id}")
     Single<Item> getItem(@Path("item_id")String id);
+
+
+    /**
+     * タグ一覧を取得する
+     * @return
+     */
+    @Headers({ContentType.JSON})
+    @GET("/api/v2/tags")
+    Observable<List<Tag>>getTags();
+
+    /**
+     * アイテムに対するコメント一覧の取得
+     * @param itemid
+     * @return
+     */
+    @Headers({ContentType.JSON})
+    @GET("/api/v2/items/{item_id}/comments")
+    Observable<List<Comment>> getComments(@Path("item_id")String itemid);
 }

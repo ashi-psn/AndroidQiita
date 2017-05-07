@@ -1,8 +1,10 @@
 package ashi_psn.jp.androidqiita.di;
 
 import ashi_psn.jp.androidqiita.view.activity.HomeActivity;
+import ashi_psn.jp.androidqiita.view.activity.ItemDetailActivity;
 import ashi_psn.jp.androidqiita.view.activity.LoginActivity;
 import ashi_psn.jp.androidqiita.viewmodel.activityviewmodel.HomeActivityViewModel;
+import ashi_psn.jp.androidqiita.viewmodel.activityviewmodel.ItemDetailActivityViewModel;
 import ashi_psn.jp.androidqiita.viewmodel.activityviewmodel.LoginActivityViewModel;
 import dagger.Subcomponent;
 
@@ -14,6 +16,8 @@ import dagger.Subcomponent;
 public interface ActivityComponent {
     void inject(LoginActivity activity);
     void inject(HomeActivity activity);
+    void inject(ItemDetailActivity activity);
     LoginActivityViewModel loginviewModel();
     HomeActivityViewModel homeviewModel();
+    ItemDetailActivityViewModel itemdetailviewModel();
 }

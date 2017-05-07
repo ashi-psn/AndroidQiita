@@ -1,10 +1,12 @@
 package ashi_psn.jp.androidqiita.model.repository.api.response;
 
+import java.io.Serializable;
+
 /**
  * Created by ashi_psn on 2017/04/22.
  */
 
-public class User {
+public class User implements Serializable{
 
     /**
      * description : Hello, world.

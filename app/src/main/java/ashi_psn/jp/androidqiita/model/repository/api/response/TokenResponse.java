@@ -1,12 +1,13 @@
 package ashi_psn.jp.androidqiita.model.repository.api.response;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by ashi_psn on 2017/04/21.
  */
 
-public class TokenResponse{
+public class TokenResponse implements Serializable{
 
 
     /**

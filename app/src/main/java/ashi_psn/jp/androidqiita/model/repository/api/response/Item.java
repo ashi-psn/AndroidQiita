@@ -5,6 +5,7 @@ import android.databinding.Bindable;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
 import ashi_psn.jp.androidqiita.BR;
@@ -13,7 +14,7 @@ import ashi_psn.jp.androidqiita.BR;
  * Created by ashi_psn on 2017/04/22.
  */
 
-public class Item extends BaseObservable{
+public class Item extends BaseObservable implements Serializable{
 
     /**
      * rendered_body : <h1>Example</h1>
@@ -148,7 +149,7 @@ public class Item extends BaseObservable{
     }
 
 
-    public static class TagsBean {
+    public static class TagsBean implements Serializable{
         /**
          * name : bug
          * versions : []

@@ -8,33 +8,30 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import ashi_psn.jp.androidqiita.model.repository.QiitaAPIRepository;
 import ashi_psn.jp.androidqiita.model.repository.api.request.requestbody.ItemQuery;
 import ashi_psn.jp.androidqiita.model.repository.api.response.Item;
-import ashi_psn.jp.androidqiita.model.repository.QiitaAPIRepository;
+import ashi_psn.jp.androidqiita.model.repository.api.response.Tag;
 import rx.Observable;
 
-/**
- * 記事の取得・投稿ユースケース
- */
-public class ItemUseCase {
+
+public class TagUseCase {
 
     private final QiitaAPIRepository apiRepository;
 
     @Inject
-    public ItemUseCase(QiitaAPIRepository apiRepository){
+    public TagUseCase(QiitaAPIRepository apiRepository){
         this.apiRepository = apiRepository;
     }
 
     /**
-     * 投稿を検索
+     * タグ一覧を取得する
      * @param query
      * @return
      */
-    public Observable<List<Item>> getItems(ItemQuery query){
-        return apiRepository.getItems(query);
+    public Observable<List<Tag>> getTags(){
+        return apiRepository.getTags();
     }
-
-//    public Observable<Item>getItem()
 
 
 }

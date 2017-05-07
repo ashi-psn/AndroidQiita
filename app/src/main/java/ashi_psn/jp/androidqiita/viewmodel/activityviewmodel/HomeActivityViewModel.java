@@ -23,14 +23,12 @@ public class HomeActivityViewModel extends BaseActivityViewModel {
 
     private final ItemUseCase itemUseCase;
     private final AfterReadingUseCase afterReadingUseCase;
-    public ObservableArrayList<Item> items;
 
     @Inject
     public HomeActivityViewModel(BaseActivity activity, ItemUseCase itemUseCase, AfterReadingUseCase afterReadingUseCase) {
         super(activity);
         this.itemUseCase = itemUseCase;
         this.afterReadingUseCase = afterReadingUseCase;
-        this.items = new ObservableArrayList<>();
     }
 
     public void getItems(View v) {
@@ -39,15 +37,7 @@ public class HomeActivityViewModel extends BaseActivityViewModel {
 
     @Override
     public void onStart() {
-        ItemQuery query = (ItemQuery) new ItemQuery.Builder().build();
-        itemUseCase.getItems(query)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(items -> {
-                    this.items.addAll(items);
-                }, throwable -> {
-                    Log.d("", "");
-                });
+
     }
 
     @Override

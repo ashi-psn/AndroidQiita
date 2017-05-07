@@ -44,8 +44,8 @@
 
             </android.support.design.widget.AppBarLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/itemrecyclerview"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/itemviewpager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -61,16 +61,6 @@
             android:background="@android:color/white"
             app:headerLayout="@layout/drawer_header"
             app:menu="@menu/drawermenu" />
-
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:onClick="@{viewmodel.getItems}"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
 
     </android.support.v4.widget.DrawerLayout>
 

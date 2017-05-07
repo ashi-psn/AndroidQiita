@@ -2,11 +2,13 @@ package ashi_psn.jp.androidqiita.model.repository.api.response;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by ashi_psn on 2017/04/22.
  */
 
-public class Group {
+public class Group implements Serializable{
     /**
      * created_at : 2000-01-01T00:00:00+00:00
      * id : 1

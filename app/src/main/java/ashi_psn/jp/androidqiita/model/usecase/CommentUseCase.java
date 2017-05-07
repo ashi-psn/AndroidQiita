@@ -5,36 +5,34 @@ package ashi_psn.jp.androidqiita.model.usecase;
  */
 
 import java.util.List;
+import java.util.StringJoiner;
 
 import javax.inject.Inject;
 
-import ashi_psn.jp.androidqiita.model.repository.api.request.requestbody.ItemQuery;
-import ashi_psn.jp.androidqiita.model.repository.api.response.Item;
 import ashi_psn.jp.androidqiita.model.repository.QiitaAPIRepository;
+import ashi_psn.jp.androidqiita.model.repository.api.request.requestbody.ItemQuery;
+import ashi_psn.jp.androidqiita.model.repository.api.response.Comment;
+import ashi_psn.jp.androidqiita.model.repository.api.response.Item;
 import rx.Observable;
 
 /**
- * 記事の取得・投稿ユースケース
+ * コメントの取得・投稿ユースケース
  */
-public class ItemUseCase {
+public class CommentUseCase {
 
     private final QiitaAPIRepository apiRepository;
 
     @Inject
-    public ItemUseCase(QiitaAPIRepository apiRepository){
+    public CommentUseCase(QiitaAPIRepository apiRepository){
         this.apiRepository = apiRepository;
     }
 
     /**
-     * 投稿を検索
+     * 投稿のidからコメント一覧を取得
      * @param query
      * @return
      */
-    public Observable<List<Item>> getItems(ItemQuery query){
-        return apiRepository.getItems(query);
+    public Observable<List<Comment>> getComments(String itemid){
+        return apiRepository.getComments(itemid);
     }
-
-//    public Observable<Item>getItem()
-
-
 }
